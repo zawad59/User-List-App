@@ -1,0 +1,89 @@
+.main-header{
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 650px;
+}
+.secondary-head{
+    position: absolute;
+    margin-top: 130px;
+    margin-left: 550px;
+}
+.form-group{
+    position: absolute;
+    margin-top: 230px;
+    margin-left: 390px;
+    padding-right: 10px;
+   
+}
+.table{
+    position: absolute;
+    margin-top: 330px;
+    margin-left: 110px;
+    padding-right: 10px;
+}
+.btn.btn-secondary{
+    padding-left: -12px;
+}
+.form-horizontal{
+    position: absolute;
+    margin-top: -1px;
+    margin-left: 110px;
+    padding-right: 10px;
+}
+.modal-body{
+    width:100px;
+    height:1300px;
+}
+
+.firstnamemodal{
+    position: absolute;
+    margin-top: -121px;
+    margin-left: -230px;
+  
+}
+.lastnamemodal2{
+    position: absolute;
+    margin-top: -60px;
+    margin-left: -220px;
+}
+
+.emailmodal{
+    position: absolute;
+    margin-top: -14px;
+    margin-left: -220px;
+}
+.buttonmodaledit{
+    position: absolute;
+    margin-top: 220px;
+    margin-left:-210px;
+}
+.firstnamemodaltext{
+    position: absolute;
+    margin-top: 1px;
+    margin-left: 65px;
+}
+.lastnamemodaltext{
+    position: absolute;
+    margin-top: 1px;
+    margin-left: 25px;
+}
+.emailmodaltext{
+    position: absolute;
+    
+    margin-left: 15px;
+}
+.firstnamemodal{
+    position: absolute;
+    margin-top: -90px;
+    margin-left: -235px;
+}
+.lastnamemodal{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: -235px;
+}
+.emailmodal1{
+    position: absolute;
+    margin-top: 100px;
+    margin-left: -235px;
+}

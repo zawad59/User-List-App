@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <title>UserList</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/angular.css" rel="stylesheet">
+    <script type="text/javascript" src= "js/angular.min.js"></script>
+    <script type="text/javascript" src= "js/app.js"></script>
+  
+  </head>
+  <body ng-app="myApp" ng-controller="myController">
+    <h1 class = "main-header">User List</h1>
+    <h3 class = "secondary-head">Quickly Build an effective user table</h3>
+ 
+    <form name="myForm" >
+        <div class="form-group" >
+          
+          <input type="text" class="firstname" id="firstname"  placeholder="First name"  ng-model = "NewUserList.Firstname" >
+          <input type="text" class="lastname" id="lastname"  placeholder="Last name"  ng-model = "NewUserList.Lastname" >
+          <input type="text" class="emailuser" id="email"  placeholder="Email"   ng-model="NewUserList.Email" >
+          <button type="button" class="btn btn-secondary" ng-click = "Add_New_User()">Add New User</button>
+          
+         
+       
+        </div>
+        </form>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Email</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="users in userList">
+                <th scope="row">{{$index+1}}</th>
+                <td>{{users.Firstname}}</td>
+                <td>{{users.Lastname}}</td>
+                <td>{{users.Email}}</td>
+                <td><button type="button" class="btn btn-secondary" ng-click="Delete_User()">Delete</button> <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2" ng-click = "Find_User(users)">View</button>
+                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" ng-click = "Find_User(users)">Edit</button>
+                </td>
+              </tr>
+             
+            </tbody>
+          </table>
+          <!-- Bootstrap Modal for Editing Users-->
+          <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+          
+              
+              <div class="modal-content">
+                <div class="modal-header">
+                  
+                  <h4 class="modal-title">Edit User</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <div class="firstnamemodal">
+                        <label for="firstname_field" class="col-sm-2 control-label">first</label>
+                        
+                          <input type="text" class="form-control" id="firstnamemodaltext" placeholder="Firstname" ng-model = "SelectedUser.Firstname" >
+                        </div>
+                    
+            
+                      <div class="lastnamemodal">
+                        <label for="lastname_field" class="col-sm-2 control-label">lastname</label>
+                       
+                          <input type="text" class="form-control" id="lastnamemodaltext" placeholder="Lastname" ng-model = "SelectedUser.Lastname">
+                        </div>
+                      
+            
+                      <div class="emailmodal1">
+                        <label for="email_field" class="col-sm-2 control-label">email</label>
+                       
+                          <input type="text" class="form-control" id="lastnamemodaltext" placeholder="email" ng-model = "SelectedUser.Email">
+                        </div>
+                     
+                                    
+                     
+                        <div class="buttonmodaledit">
+                          <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="Edit_User_Info();" data-dismiss="modal">Save</button>
+                        </div>
+                    
+                      
+                   
+                    </form>
+                </div>
+                </div>
+                
+              </div>
+          
+            </div>
+          </div>
+          <!-- Bootstrap Modal for Viewing Users-->
+          <div id="myModal2" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+          
+              
+              <div class="modal-content">
+                <div class="modal-header">
+                  
+                  <h4 class="modal-title">User Information</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <div class="firstnamemodal">
+                        <label for="firstname_field" class="col-sm-2 control-label">Firstname: </label>
+                        
+                          <label text ="SelectedUser.Firstname" id="firstnamemodaltext" class="firstnamemodaltext" placeholder="Firstname" ng-bind = "SelectedUser.Firstname" ></label>
+                        </div>
+                    
+            
+                      <div class="lastnamemodal2">
+                        <label  class="last_name_field">Lastname:</label>
+                       
+                          <label  id="lastnamemodaltext" class="lastnamemodaltext" placeholder="Lastname" ng-bind = "SelectedUser.Lastname"></label>
+                        </div>
+                      
+            
+                      <div class="emailmodal">
+                        <label for="email_field" class="email_field">Email:</label>
+                       
+                          <label  for="lastnamemodaltext" class="emailmodaltext" placeholder="email" ng-bind = "SelectedUser.Email"></label>
+                        </div>  
+                     </div>
+                               
+                     
+                    
+                     
+                   
+                    </form>
+                
+                
+            </div>
+              </div>
+          
+            </div>
+          </div>
+          
+          
+          
+            
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   
+    <script src="js/bootstrap.min.js"></script>
+  
+ 
+
+       
+    
+  </body>
+</html>
